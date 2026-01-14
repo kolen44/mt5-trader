@@ -1344,8 +1344,8 @@
     },
     "mtapi.be.mt5net/5.4850.0": {
       "type": "project",
-      "path": "../../../mt5-net-api-main/mt5-net-api-main/mt5api.csproj",
-      "msbuildProject": "../../../mt5-net-api-main/mt5-net-api-main/mt5api.csproj"
+      "path": "../../lib/mt5api/mt5api.csproj",
+      "msbuildProject": "../../lib/mt5api/mt5api.csproj"
     },
     "TickLeadLagAnalyzer.Domain/1.0.0": {
       "type": "project",

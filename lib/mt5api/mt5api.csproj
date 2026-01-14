@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>mtapi.mt5</RootNamespace>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <Version>5.4850.0.0</Version>
+    <Authors>mtapi.tech</Authors>
+    <Company>mtapi.online</Company>
+    <Product>MT5 .NET API</Product>
+    <Configurations>Debug;Release;Trial;Full</Configurations>
+    <AssemblyVersion>5.3677.1.2</AssemblyVersion>
+	<Deterministic>false</Deterministic>
+	<PackageId>mtapi.be.mt5net</PackageId>
+	<Title>MT5 Client API for .NET</Title>
+	<Description>API allows to work with any MT5 server directly from your .NET code. You just need mt4 user, password, host and port.</Description>
+	<PackageProjectUrl>https://mtapi.online</PackageProjectUrl>
+	<PackageReadmeFile>readme.md</PackageReadmeFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>C:\Yandex.Disk\Tim\@proj\mt5-net-api\Test\bin\Release\mt5api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Full|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>C:\Yandex.Disk\Tim\@proj\mt5-net-api\Test\bin\Release\mt5api.xml</DocumentationFile>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Trial|AnyCPU'">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <DocumentationFile>C:\Yandex.Disk\Tim\@proj\mt5-net-api\Test\bin\Release\mt5api.xml</DocumentationFile>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exception\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0'?>
+<Obfuscator>
+	<Var name="InPath" value="./build" />
+	<Var name="OutPath" value="./obfuscar" />
+	<Module file="$(InPath)/mt5api.dll" />
+	<Var name="KeepPublicApi" value="true" />
+	<Var name="HidePrivateApi" value="true" />
+	<Var name="RenameProperties" value="true" />
+	<Var name="RenameEvents" value="true" />
+	<Var name="RenameFields" value="true" />
+	<Var name="UseUnicodeNames" value="true" />
+	<Var name="HideStrings" value="true" />
+	<Var name="OptimizeMethods" value="true" />
+	<Var name="SuppressIldasm" value="true" />
+</Obfuscator>

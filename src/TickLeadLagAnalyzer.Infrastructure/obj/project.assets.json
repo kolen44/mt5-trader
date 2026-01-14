@@ -163,8 +163,8 @@
     },
     "mtapi.be.mt5net/5.4850.0": {
       "type": "project",
-      "path": "../../../mt5-net-api-main/mt5-net-api-main/mt5api.csproj",
-      "msbuildProject": "../../../mt5-net-api-main/mt5-net-api-main/mt5api.csproj"
+      "path": "../../lib/mt5api/mt5api.csproj",
+      "msbuildProject": "../../lib/mt5api/mt5api.csproj"
     },
     "TickLeadLagAnalyzer.Domain/1.0.0": {
       "type": "project",
@@ -211,8 +211,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\projects\\WP\\mt5-net-api-main\\mt5-net-api-main\\mt5api.csproj": {
-              "projectPath": "C:\\projects\\WP\\mt5-net-api-main\\mt5-net-api-main\\mt5api.csproj"
+            "C:\\projects\\WP\\result\\lib\\mt5api\\mt5api.csproj": {
+              "projectPath": "C:\\projects\\WP\\result\\lib\\mt5api\\mt5api.csproj"
             },
             "C:\\projects\\WP\\result\\src\\TickLeadLagAnalyzer.Domain\\TickLeadLagAnalyzer.Domain.csproj": {
               "projectPath": "C:\\projects\\WP\\result\\src\\TickLeadLagAnalyzer.Domain\\TickLeadLagAnalyzer.Domain.csproj"

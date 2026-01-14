@@ -1,0 +1,4 @@
+include:
+  - project: 'root/ci'
+    ref: main
+    file: 'mt5net.yml'

@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TickLeadLagAnalyzer.Domain\TickLeadLagAnalyzer.Domain.csproj" />
-    <ProjectReference Include="..\..\..\mt5-net-api-main\mt5-net-api-main\mt5api.csproj" />
+    <ProjectReference Include="..\..\lib\mt5api\mt5api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

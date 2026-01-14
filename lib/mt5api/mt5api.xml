@@ -1,0 +1,2822 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>mt5api</name>
+    </assembly>
+    <members>
+        <member name="T:mtapi.mt5.FromBufReader">
+            <summary>
+            Desirializer
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.OnQuote">
+            <summary>
+            New quote
+            </summary>
+            <param name="api">Sender</param>
+            <param name="quote">Quote</param>
+        </member>
+        <member name="T:mtapi.mt5.OnOrderUpdate">
+            <summary>
+            Order update notification from server
+            </summary>
+            <param name="sender">Sender</param>
+            <param name="update">Update details</param>
+        </member>
+        <member name="T:mtapi.mt5.OnOrderProgress">
+            <summary>
+            Trade progress
+            </summary>
+            <param name="sender">Sender</param>
+            /// <param name="progress">Progress details</param>
+        </member>
+        <member name="T:mtapi.mt5.OnConnectProgress">
+            <summary>
+            Connect progress.
+            </summary>
+            <param name="sender">Object that sent event</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="T:mtapi.mt5.OnSymbolsUpdate">
+            <summary>
+            Symbols update.
+            </summary>
+            <param name="sender">Object that sent event</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="T:mtapi.mt5.OnOrderHistory">
+            <summary>
+            Order history
+            </summary>
+            <param name="sender">Sender</param>
+            <param name="orders">Hi level orders</param>
+            <param name="internal_deals">Low level deals</param>
+            <param name="internal_orders">Low level orders</param>
+        </member>
+        <member name="T:mtapi.mt5.OnQuoteHistory">
+            <summary>
+            Quote history event. Use RequestQuoteHistory to request history. 
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.DealType">
+            <summary>
+            Deal type
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ExpirationType">
+            <summary>
+            Expiration type
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.FillPolicy">
+            <summary>
+            Fill policy
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Msg">
+            <summary>
+            Server message
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Direction">
+            <summary>
+            Direction of the deal
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.OrderState">
+            <summary>
+            Order state
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.OrderType">
+            <summary>
+            Order type
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.PlacedType">
+            <summary>
+            Placed manually or ByExpert
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.CalculationMode">
+            <summary>
+            Profit calculation mode
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.MarginMode">
+            <summary>
+            Margin calculation mode
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.TradeMode">
+            <summary>
+            Trade mode
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.GTCMode">
+            <summary>
+            GTC mode
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.SwapType">
+            <summary>
+            Swap type
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.V3DaysSwap">
+            <summary>
+            Swap day
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ExecutionType">
+            <summary>
+            Execution type
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AccMethod">
+            <summary>
+            Netting or Hedging
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.TradeType">
+            <summary>
+            Trade type
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ConnectEventArgs">
+            <summary>
+            Connect event argumnets.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ConnectEventArgs.Exception">
+            <summary>
+            Connect exception. Can be null.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ConnectEventArgs.Progress">
+            <summary>
+            Connect progress
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ConnectProgress">
+            <summary>
+            Connect progress
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Quote">
+            <summary>
+            New quote event arguments.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Quote.Symbol">
+            <summary> 
+            Trading instrument.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Quote.Bid">
+            <summary>
+            Bid.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Quote.Ask">
+            <summary>
+            Ask.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Quote.Time">
+            <summary>
+            Server time.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Quote.Last">
+            <summary>
+            Last deal price.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Quote.Volume">
+            <summary>
+            Volume
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.Quote.ToString">
+            <summary>
+            Convert to string.
+            </summary>
+            <returns>"Symbol Bid Ask"</returns>
+        </member>
+        <member name="T:mtapi.mt5.QuoteHistoryEventArgs">
+            <summary>
+            Quote history event args.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.QuoteHistoryEventArgs.Symbol">
+            <summary>
+            Instrument.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.QuoteHistoryEventArgs.Bars">
+            <summary>
+            History bars.
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.MT5API">
+            <summary>
+            Main class to trade and get data
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.MT5API.ExecutionTimeout">
+            <summary>
+            Maximum ms to wait for execution
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.MT5API.PlacedType">
+            <summary>
+            Manually or by expert
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.Account">
+            <summary>
+            Account information
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.GetRequestId">
+            <summary>
+            Get uniq request ID for async trading
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.OrderSendAsync(System.Int32,System.String,System.Double,System.Double,mtapi.mt5.OrderType,System.Double,System.Double,System.UInt64,System.String,System.Int64,mtapi.mt5.FillPolicy,mtapi.mt5.TradeType,System.Double,mtapi.mt5.Expiration,System.Int64)">
+            <summary>
+            Send order and don't wait execution. Use OnOrderProgress event to get result.
+            </summary>
+            <param name="requestId">Uniq temporary ID that can be used before ticket would be assigned. You can use GetRequestID()</param>
+            <param name="symbol">Symbol</param>
+            <param name="lots">Lots</param>
+            <param name="price">Price</param>
+            <param name="type">Order type</param>
+            <param name="sl">Stop Loss</param>
+            <param name="tp">Take Profit</param>
+            <param name="deviation">Max deviation from specified price also known as Slppage</param>
+            <param name="comment">String comment</param>
+            <param name="expertID">Also known as magic number</param>
+            <param name="fillPolicy">Fill policy depends on symbol settings on broker</param>
+            <param name="tradeType">Allows to specify execution type</param>
+            <param name="stoplimit">StopLimit price</param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.OrderSend(System.String,System.Double,System.Double,mtapi.mt5.OrderType,System.Double,System.Double,System.UInt64,System.String,System.Int64,mtapi.mt5.FillPolicy,mtapi.mt5.TradeType,System.Double,mtapi.mt5.Expiration,System.Int64)">
+            <summary>
+            Send order and don't wait execution. Use OnOrderProgress event to get result.
+            </summary>
+            <param name="symbol">Symbol</param>
+            <param name="lots">Lots</param>
+            <param name="price">Price</param>
+            <param name="type">Order type</param>
+            <param name="sl">Stop Loss</param>
+            <param name="tp">Take Profit</param>
+            <param name="deviation">Max deviation from specified price also known as Slppage</param>
+            <param name="comment">String comment</param>
+            <param name="expertID">Also known as magic number</param>
+            <param name="fillPolicy">Fill policy depends on symbol settings on broker</param>
+            <param name="tradeType">Allows to specify execution type</param>
+            <param name="stoplimit">StopLimit price</param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.OrderCloseAsync(System.Int32,System.Int64,System.String,System.Double,System.Double,mtapi.mt5.OrderType,System.UInt64,mtapi.mt5.FillPolicy,System.Int64,System.String,System.Int64)">
+            <summary>
+            Send order close request and don't wait execution. Use OnOrderProgress event to get result.
+            </summary>
+            <param name="requestId">Uniq temporary ID that can be used before ticket would be assigned. You can use GetID()</param>
+            <param name="ticket">Order ticket</param>
+            <param name="symbol">Symbol</param>
+            <param name="lots">How many lots</param>
+            <param name="price">Price</param>
+            <param name="type">Order type</param>
+            <param name="deviation">Max deviation from specified price also known as Slppage</param>
+            <param name="fillPolicy">Fill policy depends on symbol settings on broker</param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.OrderClose(System.Int64,System.String,System.Double,System.Double,mtapi.mt5.OrderType,System.UInt64,mtapi.mt5.FillPolicy,System.Int64,System.String,System.Int64)">
+            <summary>
+            Send order close request and wait for execution. 
+            </summary>
+            <param name="ticket">Order ticket</param>
+            <param name="symbol">Symbol</param>
+            <param name="lots">Volume</param>
+            <param name="price">Price</param>
+            <param name="type">Order type</param>
+            <param name="deviation">Max deviation from specified price also known as Slppage</param>
+            <param name="fillPolicy">Fill policy depends on symbol settings on broker</param>
+            <returns>Closed order</returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.OrderModify(System.Int64,System.String,System.Double,System.Double,mtapi.mt5.OrderType,System.Double,System.Double,System.Int64,System.Double,mtapi.mt5.Expiration,System.String)">
+            <summary>
+            Modify order
+            </summary>
+            <param name="ticket">Ticket mnumber</param>
+            <param name="symbol">Symbol name</param>
+            <param name="lots">How many lots</param>
+            <param name="price">Price</param>
+            <param name="type">Order type</param>
+            <param name="sl">Stop loss</param>
+            <param name="tp">Take profit</param>
+            <param name="deviation">Maximum deviation in points</param>
+            <param name="comment">Comment</param>
+            <param name="expertID">Expert id</param>
+            <param name="fillPolicy">Fill policy</param>
+            <param name="stoplimit">StopLimit price</param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.OrderModifyAsync(System.Int32,System.Int64,System.String,System.Double,System.Double,mtapi.mt5.OrderType,System.Double,System.Double,System.Int64,System.Double,mtapi.mt5.Expiration,System.String)">
+            <summary>
+            OrderModifyAsync
+            </summary>
+            <param name="requestId">Request ID to identify order in OrderProgress before Ticket assigned</param>
+            <param name="ticket">Ticket mnumber</param>
+            <param name="symbol">Symbol name</param>
+            <param name="lots">How many lots</param>
+            <param name="price">Price</param>
+            <param name="type">Order type</param>
+            <param name="sl">Stop loss</param>
+            <param name="tp">Take profit</param>
+            <param name="deviation">Maximum deviation in points</param>
+            <param name="comment">Comment</param>
+            <param name="expertID">Expert id</param>
+            <param name="fillPolicy">Fill policy</param>
+            <param name="stoplimit">StopLimit price</param>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.Id">
+            <summary>
+            For user purposes
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.Host">
+            <summary>
+            Host
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.Port">
+            <summary>
+            Port
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.PfxFile">
+            <summary>
+            Certificate *.pfx file
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.PfxFilePassword">
+            <summary>
+            Pfx file password
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.MT5API.Symbols">
+            <summary>
+            Symbols information
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "E:mtapi.mt5.MT5API.OnQuote" -->
+        <!-- Badly formed XML comment ignored for member "E:mtapi.mt5.MT5API.OnOrderHistory" -->
+        <!-- Badly formed XML comment ignored for member "E:mtapi.mt5.MT5API.OnOrderUpdate" -->
+        <!-- Badly formed XML comment ignored for member "E:mtapi.mt5.MT5API.OnConnectProgress" -->
+        <!-- Badly formed XML comment ignored for member "E:mtapi.mt5.MT5API.OnSymbolsUpdate" -->
+        <member name="E:mtapi.mt5.MT5API.OnOrderProgress">
+            <summary>
+            Open/close progress of the order before ticket number assign.
+            </summary>
+        </member>
+        <member name="E:mtapi.mt5.MT5API.OnQuoteHistory">
+            <summary>
+            Quote history event. Use RequestQuoteHistory to request history. 
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.LastQuoteTime">
+            <summary>
+            Last quote time, refreshing goes with using incoming quotes. 
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.ServerTime">
+            <summary>
+            Server time, refreshing goes with using incoming quotes. 
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.MT5API.NoServerMessagesTimeout">
+            <summary>
+             Force reconnect if no quotes for some number of milliseconds.
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.ServerDetails">
+            <summary>
+            Fresh server details recieved from server during connect.
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.AccountCurrency">
+            <summary>
+            Account currency
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.AccountCompanyName">
+            <summary>
+            Company name
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.AccountMethod">
+            <summary>
+            Netting or hedging
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.AccountProfit">
+            <summary>
+            Account profit
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.UpdateProfits">
+            <summary>
+            Force update order profits
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.AccountMargin">
+            <summary>
+            Account used margin
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.AccountFreeMargin">
+            <summary>
+            Account free margin
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.AccountEquity">
+            <summary>
+            Account equity.
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.Connected">
+            <summary>
+            Check connection state.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.IsSubscribed(System.String)">
+            <summary>
+            Check subscribe trading instrument.
+            </summary>
+            <param name="symbol">Symbol for trading.</param>
+        </member>
+        <member name="F:mtapi.mt5.MT5API.LastServerMessageTime">
+            <summary>
+            Local time of last server message.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.MT5API.Server">
+            <summary>
+            Host
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.User">
+            <summary>
+            Account number
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.MT5API.Password">
+            <summary>
+            Account Password
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.LoadServersDat(System.String)">
+            <summary>
+            Read server.dat
+            </summary>
+            <param name="path">Path to servers.dat</param>
+            <returns></returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.LoadServersDat(System.Byte[])">
+            <summary>
+            Read server.dat
+            </summary>
+            <param name="bytes">servers.dat as byte array</param>
+            <returns></returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.#ctor">
+            <summary>
+            Parameterless construcotor for desiarization
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.#ctor(System.UInt64,System.String,System.String,System.Int32,System.Byte[],System.String)">
+            <summary>
+            Main construcotr
+            </summary>
+            <param name="user"></param>
+            <param name="host"></param>
+            <param name="password"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.#ctor(System.UInt64,System.String,System.String,System.Int32,System.String,System.Int32,System.String,System.String,mtapi.mt5.ProxyTypes)">
+            <summary>
+            Main construcotr
+            </summary>
+            <param name="user"></param>
+            <param name="host"></param>
+            <param name="password"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.GetContaractSize(System.String)">
+            <summary>
+            Contruct size
+            </summary>
+            <param name="symbol">Symbol</param>
+            <returns></returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.RequestOrderHistory(System.DateTime,System.DateTime)">
+            <summary>
+            Reuest closed orders.
+            </summary>
+            <param name="from">Start time of history.</param>
+            <param name="to">End time of history.</param>
+            <returns>Array of orders int OnOrderHistory event.</returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.RequestOrderHistory(System.Int32,System.Int32,System.Collections.Generic.List{mtapi.mt5.DealInternal})">
+            <summary>
+            Reuest closed orders for specified month.
+            </summary>
+            <param name="from">Start time of history.</param>
+            <param name="to">End time of history.</param>
+            <returns>Array of orders int OnOrderHistory event.</returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.DownloadOrderHistory(System.DateTime,System.DateTime)">
+            <summary>
+            Downaload order history.
+            </summary>
+            <param name="symbol">Symbol for trading.</param>
+            <param name="from">Start time of history.</param>
+            <param name="to">End time of history.</param>
+            <returns>Array of orders.</returns>
+        </member>
+        <member name="F:mtapi.mt5.MT5API.ConnectTimeout">
+            <summary>
+            Milliseconds. Throw ConnectException if not connected at this period.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.Connect">
+            <summary>
+            Connect to server.
+            </summary>
+            <exception cref="T:mtapi.mt5.ServerException">Unable to login for some reason.</exception>
+            <exception cref="T:System.TimeoutException">No reply from server.</exception>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.GetAskTickValue(mtapi.mt5.Quote)">
+            <summary>
+            Tick value in base currency
+            </summary>
+            <param name="quote"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.GetBidTickValue(mtapi.mt5.Quote)">
+            <summary>
+            Tick value in base currency
+            </summary>
+            <param name="quote"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.Disconnect">
+            <summary>
+            Disconnect from server
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.RequestQuoteHistoryMonth(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Request 1 minute bar hsitory for one month back from specifeid date
+            </summary>
+            <param name="symbol">Symbol</param>
+            <param name="year">Year</param>
+            <param name="month">Month</param>
+            <param name="day">Day</param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.RequestQuoteHistoryToday(System.String)">
+            <summary>
+            Request 1 minute bar hsitory for today
+            </summary>
+            <param name="symbol">Symbol</param>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.Subscribe(System.String)">
+            <summary>
+            Subscribe trading instrument.
+            </summary>
+            <param name="symbol">Symbol for trading.</param>
+            <exception cref="T:System.Exception">Not connected.</exception>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.Subscribe(System.String[])">
+            <summary>
+            Subscribe trading instruments.
+            </summary>
+            <param name="symbols">Symbols for trading.</param>
+            <exception cref="T:System.Exception">Not connected.</exception>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.Unsubscribe(System.String)">
+            <summary>
+            Unsubscribe trading instrument.
+            </summary>
+            <param name="symbol">Symbol</param>
+            <exception cref="T:System.Exception">Not connected.</exception>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.Unsubscribe(System.String[])">
+            <summary>
+            Unsubscribe trading instruments.
+            </summary>
+            <param name="symbols">Symbols</param>
+            <exception cref="T:System.Exception">Not connected.</exception>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.GetQuote(System.String,System.Int32)">
+            <summary>
+            Latest quote for the symbol.
+            </summary>
+            <param name="symbol">Symbol for trading.</param>
+            <exception cref="T:System.Exception">Symbol not subscribed.</exception>
+            <returns>Return null if no quotes for specified symbol avalible, otherwise return quote event arguments.</returns>
+        </member>
+        <member name="M:mtapi.mt5.MT5API.GetOpenedOrders">
+            <summary>
+            Opened orders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:mtapi.mt5.Bar">
+            <summary>
+            OHLC
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.OrderUpdate">
+            <summary>
+            Details of order update
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.SocksProxy">
+            <summary>
+            Provides sock5 functionality to clients (Connect only).
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Symbols">
+            <summary>
+            All symbol information
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AuthMethod">
+            <summary>
+            Implements a SOCKS authentication scheme.
+            </summary>
+            <remarks>This is an abstract class; it must be inherited.</remarks>
+        </member>
+        <member name="M:mtapi.mt5.AuthMethod.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            Initializes an AuthMethod instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+        </member>
+        <member name="M:mtapi.mt5.AuthMethod.Authenticate">
+            <summary>
+            Authenticates the user.
+            </summary>
+            <exception cref="T:mtapi.mt5.ProxyException">Authentication with the proxy server failed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.AuthMethod.BeginAuthenticate(mtapi.mt5.HandShakeComplete)">
+            <summary>
+            Authenticates the user asynchronously.
+            </summary>
+            <param name="callback">The method to call when the authentication is complete.</param>
+            <exception cref="T:mtapi.mt5.ProxyException">Authentication with the proxy server failed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="P:mtapi.mt5.AuthMethod.Server">
+            <summary>
+            Gets or sets the socket connection with the proxy server.
+            </summary>
+            <value>The socket connection with the proxy server.</value>
+        </member>
+        <member name="P:mtapi.mt5.AuthMethod.Buffer">
+            <summary>
+            Gets or sets a byt array that can be used to store data.
+            </summary>
+            <value>A byte array to store data.</value>
+        </member>
+        <member name="P:mtapi.mt5.AuthMethod.Received">
+            <summary>
+            Gets or sets the number of bytes that have been received from the remote proxy server.
+            </summary>
+            <value>An integer that holds the number of bytes that have been received from the remote proxy server.</value>
+        </member>
+        <member name="F:mtapi.mt5.AuthMethod.m_Buffer">
+            <summary>Holds the value of the Buffer property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.AuthMethod.m_Server">
+            <summary>Holds the value of the Server property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.AuthMethod.CallBack">
+            <summary>Holds the address of the method to call when the proxy has authenticated the client.</summary>
+        </member>
+        <member name="F:mtapi.mt5.AuthMethod.m_Received">
+            <summary>Holds the value of the Received property.</summary>
+        </member>
+        <member name="T:mtapi.mt5.AuthNone">
+            <summary>
+            This class implements the 'No Authentication' scheme.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.AuthNone.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            Initializes an AuthNone instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+        </member>
+        <member name="M:mtapi.mt5.AuthNone.Authenticate">
+            <summary>
+            Authenticates the user.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.AuthNone.BeginAuthenticate(mtapi.mt5.HandShakeComplete)">
+            <summary>
+            Authenticates the user asynchronously.
+            </summary>
+            <param name="callback">The method to call when the authentication is complete.</param>
+            <remarks>This method immediately calls the callback method.</remarks>
+        </member>
+        <member name="T:mtapi.mt5.AuthUserPass">
+            <summary>
+            This class implements the 'username/password authentication' scheme.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.AuthUserPass.#ctor(System.Net.Sockets.Socket,System.String,System.String)">
+            <summary>
+            Initializes a new AuthUserPass instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <param name="user">The username to use.</param>
+            <param name="pass">The password to use.</param>
+            <exception cref="T:System.ArgumentNullException"><c>user</c> -or- <c>pass</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.AuthUserPass.GetAuthenticationBytes">
+            <summary>
+            Creates an array of bytes that has to be sent if the user wants to authenticate with the username/password authentication scheme.
+            </summary>
+            <returns>An array of bytes that has to be sent if the user wants to authenticate with the username/password authentication scheme.</returns>
+        </member>
+        <member name="M:mtapi.mt5.AuthUserPass.Authenticate">
+            <summary>
+            Starts the authentication process.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.AuthUserPass.BeginAuthenticate(mtapi.mt5.HandShakeComplete)">
+            <summary>
+            Starts the asynchronous authentication process.
+            </summary>
+            <param name="callback">The method to call when the authentication is complete.</param>
+        </member>
+        <member name="M:mtapi.mt5.AuthUserPass.OnSent(System.IAsyncResult)">
+            <summary>
+            Called when the authentication bytes have been sent.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.AuthUserPass.OnReceive(System.IAsyncResult)">
+            <summary>
+            Called when the socket received an authentication reply.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="P:mtapi.mt5.AuthUserPass.Username">
+            <summary>
+            Gets or sets the username to use when authenticating with the proxy server.
+            </summary>
+            <value>The username to use when authenticating with the proxy server.</value>
+            <exception cref="T:System.ArgumentNullException">The specified value is null.</exception>
+        </member>
+        <member name="P:mtapi.mt5.AuthUserPass.Password">
+            <summary>
+            Gets or sets the password to use when authenticating with the proxy server.
+            </summary>
+            <value>The password to use when authenticating with the proxy server.</value>
+            <exception cref="T:System.ArgumentNullException">The specified value is null.</exception>
+        </member>
+        <member name="F:mtapi.mt5.AuthUserPass.m_Username">
+            <summary>Holds the value of the Username property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.AuthUserPass.m_Password">
+            <summary>Holds the value of the Password property.</summary>
+        </member>
+        <member name="T:mtapi.mt5.HttpsHandler">
+            <summary>
+            Implements the HTTPS (CONNECT) protocol.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            Initializes a new HttpsHandler instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c>  is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.#ctor(System.Net.Sockets.Socket,System.String)">
+            <summary>
+            Initializes a new HttpsHandler instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <param name="user">The username to use.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c> -or- <c>user</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.#ctor(System.Net.Sockets.Socket,System.String,System.String)">
+            <summary>
+            Initializes a new HttpsHandler instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <param name="user">The username to use.</param>
+            <param name="pass">The password to use.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c> -or- <c>user</c> -or- <c>pass</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.GetConnectBytes(System.String,System.Int32)">
+            <summary>
+            Creates an array of bytes that has to be sent when the user wants to connect to a specific IPEndPoint.
+            </summary>
+            <returns>An array of bytes that has to be sent when the user wants to connect to a specific IPEndPoint.</returns>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.VerifyConnectHeader(System.Byte[])">
+            <summary>
+            Verifies that proxy server successfully connected to requested host
+            </summary>
+            <param name="buffer">Input data array</param>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.Negotiate(System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="remoteEP">The IPEndPoint to connect to.</param>
+            <exception cref="T:System.ArgumentNullException"><c>remoteEP</c> is null.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.Negotiate(System.String,System.Int32)">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port to connect to.</param>
+            <exception cref="T:System.ArgumentNullException"><c>host</c> is null.</exception>
+            <exception cref="T:System.ArgumentException"><c>port</c> is invalid.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.BeginNegotiate(System.Net.IPEndPoint,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with the HTTPS server. 
+            </summary>
+            <param name="remoteEP">An IPEndPoint that represents the remote device.</param>
+            <param name="callback">The method to call when the negotiation is complete.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the HTTPS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.BeginNegotiate(System.String,System.Int32,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with the HTTPS server. 
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port to connect to.</param>
+            <param name="callback">The method to call when the negotiation is complete.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the HTTPS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.OnConnect(System.IAsyncResult)">
+            <summary>
+            Called when the socket is connected to the remote server.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.OnConnectSent(System.IAsyncResult)">
+            <summary>
+            Called when the connect request bytes have been sent.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.OnConnectReceive(System.IAsyncResult)">
+            <summary>
+            Called when an connect reply has been received.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.ReadUntilHeadersEnd(System.Boolean)">
+            <summary>
+            Reads socket buffer byte by byte until we reach "\r\n\r\n". 
+            </summary>
+            <param name="readFirstByte"></param>
+        </member>
+        <member name="M:mtapi.mt5.HttpsHandler.OnEndHeadersReceive(System.IAsyncResult)">
+            <summary>
+            Called when additional headers have been received.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="P:mtapi.mt5.HttpsHandler.Password">
+            <summary>
+            Gets or sets the password to use when authenticating with the HTTPS server.
+            </summary>
+            <value>The password to use when authenticating with the HTTPS server.</value>
+        </member>
+        <member name="F:mtapi.mt5.HttpsHandler.m_Password">
+            <summary>Holds the value of the Password property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.HttpsHandler.m_receivedNewlineChars">
+            <summary>Holds the count of newline characters received.</summary>
+        </member>
+        <member name="T:mtapi.mt5.IAsyncProxyResult">
+            <summary>
+            A class that implements the IAsyncResult interface. Objects from this class are returned by the BeginConnect method of the ProxySocket class.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.IAsyncProxyResult.#ctor(System.Object)">
+            <summary>Initializes the internal variables of this object</summary>
+            <param name="stateObject">An object that contains state information for this request.</param>
+        </member>
+        <member name="M:mtapi.mt5.IAsyncProxyResult.Reset">
+            <summary>Initializes the internal variables of this object</summary>
+        </member>
+        <member name="P:mtapi.mt5.IAsyncProxyResult.IsCompleted">
+            <summary>Gets a value that indicates whether the server has completed processing the call. It is illegal for the server to use any client supplied resources outside of the agreed upon sharing semantics after it sets the IsCompleted property to "true". Thus, it is safe for the client to destroy the resources after IsCompleted property returns "true".</summary>
+            <value>A boolean that indicates whether the server has completed processing the call.</value>
+        </member>
+        <member name="P:mtapi.mt5.IAsyncProxyResult.CompletedSynchronously">
+            <summary>Gets a value that indicates whether the BeginXXXX call has been completed synchronously. If this is detected in the AsyncCallback delegate, it is probable that the thread that called BeginInvoke is the current thread.</summary>
+            <value>Returns false.</value>
+        </member>
+        <member name="P:mtapi.mt5.IAsyncProxyResult.AsyncState">
+            <summary>Gets an object that was passed as the state parameter of the BeginXXXX method call.</summary>
+            <value>The object that was passed as the state parameter of the BeginXXXX method call.</value>
+        </member>
+        <member name="P:mtapi.mt5.IAsyncProxyResult.AsyncWaitHandle">
+             <summary>
+             The AsyncWaitHandle property returns the WaitHandle that can use to perform a WaitHandle.WaitOne or WaitAny or WaitAll. The object which implements IAsyncResult need not derive from the System.WaitHandle classes directly. The WaitHandle wraps its underlying synchronization primitive and should be signaled after the call is completed. This enables the client to wait for the call to complete instead polling. The Runtime supplies a number of waitable objects that mirror Win32 synchronization primitives e.g. ManualResetEvent, AutoResetEvent and Mutex.
+             WaitHandle supplies methods that support waiting for such synchronization objects to become signaled with "any" or "all" semantics i.e. WaitHandle.WaitOne, WaitAny and WaitAll. Such methods are context aware to avoid deadlocks. The AsyncWaitHandle can be allocated eagerly or on demand. It is the choice of the IAsyncResult implementer.
+            </summary>
+             <value>The WaitHandle associated with this asynchronous result.</value>
+        </member>
+        <member name="F:mtapi.mt5.IAsyncProxyResult.m_Completed">
+            <summary>Used internally to represent the state of the asynchronous request</summary>
+        </member>
+        <member name="F:mtapi.mt5.IAsyncProxyResult.m_StateObject">
+            <summary>Holds the value of the StateObject property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.IAsyncProxyResult.m_WaitHandle">
+            <summary>Holds the value of the WaitHandle property.</summary>
+        </member>
+        <member name="T:mtapi.mt5.ProxyException">
+            <summary>
+            The exception that is thrown when a proxy error occurs.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.ProxyException.#ctor">
+            <summary>
+            Initializes a new instance of the ProxyException class.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.ProxyException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ProxyException class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:mtapi.mt5.ProxyException.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the ProxyException class.
+            </summary>
+            <param name="socks5Error">The error number returned by a SOCKS5 server.</param>
+        </member>
+        <member name="M:mtapi.mt5.ProxyException.Socks5ToString(System.Int32)">
+            <summary>
+            Converts a SOCKS5 error number to a human readable string.
+            </summary>
+            <param name="socks5Error">The error number returned by a SOCKS5 server.</param>
+            <returns>A string representation of the specified SOCKS5 error number.</returns>
+        </member>
+        <member name="T:mtapi.mt5.ProxyTypes">
+            <summary>
+            Specifies the type of proxy servers that an instance of the ProxySocket class can use.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxyTypes.None">
+            <summary>No proxy server; the ProxySocket object behaves exactly like an ordinary Socket object.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxyTypes.Https">
+            <summary>A HTTPS (CONNECT) proxy server.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxyTypes.Socks4">
+            <summary>A SOCKS4[A] proxy server.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxyTypes.Socks5">
+            <summary>A SOCKS5 proxy server.</summary>
+        </member>
+        <member name="T:mtapi.mt5.ProxySocket">
+            <summary>
+            Implements a Socket class that can connect trough a SOCKS proxy server.
+            </summary>
+            <remarks>This class implements SOCKS4[A] and SOCKS5.<br>It does not, however, implement the BIND commands, so you cannot .</br></remarks>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.#ctor(System.Net.Sockets.AddressFamily,System.Net.Sockets.SocketType,System.Net.Sockets.ProtocolType)">
+            <summary>
+            Initializes a new instance of the ProxySocket class.
+            </summary>
+            <param name="addressFamily">One of the AddressFamily values.</param>
+            <param name="socketType">One of the SocketType values.</param>
+            <param name="protocolType">One of the ProtocolType values.</param>
+            <exception cref="T:System.Net.Sockets.SocketException">The combination of addressFamily, socketType, and protocolType results in an invalid socket.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.#ctor(System.Net.Sockets.AddressFamily,System.Net.Sockets.SocketType,System.Net.Sockets.ProtocolType,System.String)">
+            <summary>
+            Initializes a new instance of the ProxySocket class.
+            </summary>
+            <param name="addressFamily">One of the AddressFamily values.</param>
+            <param name="socketType">One of the SocketType values.</param>
+            <param name="protocolType">One of the ProtocolType values.</param>
+            <param name="proxyUsername">The username to use when authenticating with the proxy server.</param>
+            <exception cref="T:System.Net.Sockets.SocketException">The combination of addressFamily, socketType, and protocolType results in an invalid socket.</exception>
+            <exception cref="T:System.ArgumentNullException"><c>proxyUsername</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.#ctor(System.Net.Sockets.AddressFamily,System.Net.Sockets.SocketType,System.Net.Sockets.ProtocolType,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the ProxySocket class.
+            </summary>
+            <param name="addressFamily">One of the AddressFamily values.</param>
+            <param name="socketType">One of the SocketType values.</param>
+            <param name="protocolType">One of the ProtocolType values.</param>
+            <param name="proxyUsername">The username to use when authenticating with the proxy server.</param>
+            <param name="proxyPassword">The password to use when authenticating with the proxy server.</param>
+            <exception cref="T:System.Net.Sockets.SocketException">The combination of addressFamily, socketType, and protocolType results in an invalid socket.</exception>
+            <exception cref="T:System.ArgumentNullException"><c>proxyUsername</c> -or- <c>proxyPassword</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.Connect(System.Net.EndPoint)">
+            <summary>
+            Establishes a connection to a remote device.
+            </summary>
+            <param name="remoteEP">An EndPoint that represents the remote device.</param>
+            <exception cref="T:System.ArgumentNullException">The remoteEP parameter is a null reference (Nothing in Visual Basic).</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">An error occurred while talking to the proxy server.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.Connect(System.String,System.Int32)">
+            <summary>
+            Establishes a connection to a remote device.
+            </summary>
+            <param name="host">The remote host to connect to.</param>
+            <param name="port">The remote port to connect to.</param>
+            <exception cref="T:System.ArgumentNullException">The host parameter is a null reference (Nothing in Visual Basic).</exception>
+            <exception cref="T:System.ArgumentException">The port parameter is invalid.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">An error occurred while talking to the proxy server.</exception>
+            <remarks>If you use this method with a SOCKS4 server, it will let the server resolve the hostname. Not all SOCKS4 servers support this 'remote DNS' though.</remarks>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.BeginConnect(System.Net.EndPoint,System.AsyncCallback,System.Object)">
+            <summary>
+            Begins an asynchronous request for a connection to a network device.
+            </summary>
+            <param name="remoteEP">An EndPoint that represents the remote device.</param>
+            <param name="callback">The AsyncCallback delegate.</param>
+            <param name="state">An object that contains state information for this request.</param>
+            <returns>An IAsyncResult that references the asynchronous connection.</returns>
+            <exception cref="T:System.ArgumentNullException">The remoteEP parameter is a null reference (Nothing in Visual Basic).</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while creating the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.BeginConnect(System.String,System.Int32,System.AsyncCallback,System.Object)">
+            <summary>
+            Begins an asynchronous request for a connection to a network device.
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port on the remote host to connect to.</param>
+            <param name="callback">The AsyncCallback delegate.</param>
+            <param name="state">An object that contains state information for this request.</param>
+            <returns>An IAsyncResult that references the asynchronous connection.</returns>
+            <exception cref="T:System.ArgumentNullException">The host parameter is a null reference (Nothing in Visual Basic).</exception>
+            <exception cref="T:System.ArgumentException">The port parameter is invalid.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while creating the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.EndConnect(System.IAsyncResult)">
+            <summary>
+            Ends a pending asynchronous connection request.
+            </summary>
+            <param name="asyncResult">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+            <exception cref="T:System.ArgumentNullException">The asyncResult parameter is a null reference (Nothing in Visual Basic).</exception>
+            <exception cref="T:System.ArgumentException">The asyncResult parameter was not returned by a call to the BeginConnect method.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:System.InvalidOperationException">EndConnect was previously called for the asynchronous connection.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy server refused the connection.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.BeginDns(System.String,mtapi.mt5.HandShakeComplete)">
+            <summary>
+            Begins an asynchronous request to resolve a DNS host name or IP address in dotted-quad notation to an IPAddress instance.
+            </summary>
+            <param name="host">The host to resolve.</param>
+            <param name="callback">The method to call when the hostname has been resolved.</param>
+            <returns>An IAsyncResult instance that references the asynchronous request.</returns>
+            <exception cref="T:System.Net.Sockets.SocketException">There was an error while trying to resolve the host.</exception>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.OnResolved(System.IAsyncResult)">
+            <summary>
+            Called when the specified hostname has been resolved.
+            </summary>
+            <param name="asyncResult">The result of the asynchronous operation.</param>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.OnConnect(System.IAsyncResult)">
+            <summary>
+            Called when the Socket is connected to the remote host.
+            </summary>
+            <param name="asyncResult">The result of the asynchronous operation.</param>
+        </member>
+        <member name="M:mtapi.mt5.ProxySocket.OnHandShakeComplete(System.Exception)">
+            <summary>
+            Called when the Socket has finished talking to the proxy server and is ready to relay data.
+            </summary>
+            <param name="error">The error to throw when the EndConnect method is called.</param>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.ProxyEndPoint">
+            <summary>
+            Gets or sets the EndPoint of the proxy server.
+            </summary>
+            <value>An IPEndPoint object that holds the IP address and the port of the proxy server.</value>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.ProxyType">
+            <summary>
+            Gets or sets the type of proxy server to use.
+            </summary>
+            <value>One of the ProxyTypes values.</value>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.State">
+            <summary>
+            Gets or sets a user-defined object.
+            </summary>
+            <value>The user-defined object.</value>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.ProxyUser">
+            <summary>
+            Gets or sets the username to use when authenticating with the proxy.
+            </summary>
+            <value>A string that holds the username that's used when authenticating with the proxy.</value>
+            <exception cref="T:System.ArgumentNullException">The specified value is null.</exception>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.ProxyPass">
+            <summary>
+            Gets or sets the password to use when authenticating with the proxy.
+            </summary>
+            <value>A string that holds the password that's used when authenticating with the proxy.</value>
+            <exception cref="T:System.ArgumentNullException">The specified value is null.</exception>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.AsyncResult">
+            <summary>
+            Gets or sets the asynchronous result object.
+            </summary>
+            <value>An instance of the IAsyncProxyResult class.</value>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.ToThrow">
+            <summary>
+            Gets or sets the exception to throw when the EndConnect method is called.
+            </summary>
+            <value>An instance of the Exception class (or subclasses of Exception).</value>
+        </member>
+        <member name="P:mtapi.mt5.ProxySocket.RemotePort">
+            <summary>
+            Gets or sets the remote port the user wants to connect to.
+            </summary>
+            <value>An integer that specifies the port the user wants to connect to.</value>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_State">
+            <summary>Holds the value of the State property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_ProxyEndPoint">
+            <summary>Holds the value of the ProxyEndPoint property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_ProxyType">
+            <summary>Holds the value of the ProxyType property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_ProxyUser">
+            <summary>Holds the value of the ProxyUser property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_ProxyPass">
+            <summary>Holds the value of the ProxyPass property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.CallBack">
+            <summary>Holds a pointer to the method that should be called when the Socket is connected to the remote device.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_AsyncResult">
+            <summary>Holds the value of the AsyncResult property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_ToThrow">
+            <summary>Holds the value of the ToThrow property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.ProxySocket.m_RemotePort">
+            <summary>Holds the value of the RemotePort property.</summary>
+        </member>
+        <member name="T:mtapi.mt5.Socks4Handler">
+            <summary>
+            Implements the SOCKS4[A] protocol.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.#ctor(System.Net.Sockets.Socket,System.String)">
+            <summary>
+            Initializes a new instance of the SocksHandler class.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <param name="user">The username to use when authenticating with the server.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c> -or- <c>user</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.GetHostPortBytes(System.String,System.Int32)">
+            <summary>
+            Creates an array of bytes that has to be sent when the user wants to connect to a specific host/port combination.
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port to connect to.</param>
+            <returns>An array of bytes that has to be sent when the user wants to connect to a specific host/port combination.</returns>
+            <remarks>Resolving the host name will be done at server side. Do note that some SOCKS4 servers do not implement this functionality.</remarks>
+            <exception cref="T:System.ArgumentNullException"><c>host</c> is null.</exception>
+            <exception cref="T:System.ArgumentException"><c>port</c> is invalid.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.GetEndPointBytes(System.Net.IPEndPoint)">
+            <summary>
+            Creates an array of bytes that has to be sent when the user wants to connect to a specific IPEndPoint.
+            </summary>
+            <param name="remoteEP">The IPEndPoint to connect to.</param>
+            <returns>An array of bytes that has to be sent when the user wants to connect to a specific IPEndPoint.</returns>
+            <exception cref="T:System.ArgumentNullException"><c>remoteEP</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.Negotiate(System.String,System.Int32)">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port to connect to.</param>
+            <exception cref="T:System.ArgumentNullException"><c>host</c> is null.</exception>
+            <exception cref="T:System.ArgumentException"><c>port</c> is invalid.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.Negotiate(System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="remoteEP">The IPEndPoint to connect to.</param>
+            <exception cref="T:System.ArgumentNullException"><c>remoteEP</c> is null.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.Negotiate(System.Byte[])">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="connect">The bytes to send when trying to authenticate.</param>
+            <exception cref="T:System.ArgumentNullException"><c>connect</c> is null.</exception>
+            <exception cref="T:System.ArgumentException"><c>connect</c> is too small.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.BeginNegotiate(System.String,System.Int32,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with a SOCKS proxy server.
+            </summary>
+            <param name="host">The remote server to connect to.</param>
+            <param name="port">The remote port to connect to.</param>
+            <param name="callback">The method to call when the connection has been established.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the SOCKS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.BeginNegotiate(System.Net.IPEndPoint,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with a SOCKS proxy server.
+            </summary>
+            <param name="remoteEP">An IPEndPoint that represents the remote device.</param>
+            <param name="callback">The method to call when the connection has been established.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the SOCKS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.OnConnect(System.IAsyncResult)">
+            <summary>
+            Called when the Socket is connected to the remote proxy server.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.OnSent(System.IAsyncResult)">
+            <summary>
+            Called when the Socket has sent the handshake data.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks4Handler.OnReceive(System.IAsyncResult)">
+            <summary>
+            Called when the Socket has received a reply from the remote proxy server.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="T:mtapi.mt5.Socks5Handler">
+            <summary>
+            Implements the SOCKS5 protocol.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            Initializes a new Socks5Handler instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c>  is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.#ctor(System.Net.Sockets.Socket,System.String)">
+            <summary>
+            Initializes a new Socks5Handler instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <param name="user">The username to use.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c> -or- <c>user</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.#ctor(System.Net.Sockets.Socket,System.String,System.String)">
+            <summary>
+            Initializes a new Socks5Handler instance.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <param name="user">The username to use.</param>
+            <param name="pass">The password to use.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c> -or- <c>user</c> -or- <c>pass</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.Authenticate">
+            <summary>
+            Starts the synchronous authentication process.
+            </summary>
+            <exception cref="T:mtapi.mt5.ProxyException">Authentication with the proxy server failed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.GetHostPortBytes(System.String,System.Int32)">
+            <summary>
+            Creates an array of bytes that has to be sent when the user wants to connect to a specific host/port combination.
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port to connect to.</param>
+            <returns>An array of bytes that has to be sent when the user wants to connect to a specific host/port combination.</returns>
+            <exception cref="T:System.ArgumentNullException"><c>host</c> is null.</exception>
+            <exception cref="T:System.ArgumentException"><c>port</c> or <c>host</c> is invalid.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.GetEndPointBytes(System.Net.IPEndPoint)">
+            <summary>
+            Creates an array of bytes that has to be sent when the user wants to connect to a specific IPEndPoint.
+            </summary>
+            <param name="remoteEP">The IPEndPoint to connect to.</param>
+            <returns>An array of bytes that has to be sent when the user wants to connect to a specific IPEndPoint.</returns>
+            <exception cref="T:System.ArgumentNullException"><c>remoteEP</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.Negotiate(System.String,System.Int32)">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port to connect to.</param>
+            <exception cref="T:System.ArgumentNullException"><c>host</c> is null.</exception>
+            <exception cref="T:System.ArgumentException"><c>port</c> is invalid.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.Negotiate(System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="remoteEP">The IPEndPoint to connect to.</param>
+            <exception cref="T:System.ArgumentNullException"><c>remoteEP</c> is null.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.Negotiate(System.Byte[])">
+            <summary>
+            Starts negotiating with the SOCKS server.
+            </summary>
+            <param name="connect">The bytes to send when trying to authenticate.</param>
+            <exception cref="T:System.ArgumentNullException"><c>connect</c> is null.</exception>
+            <exception cref="T:System.ArgumentException"><c>connect</c> is too small.</exception>
+            <exception cref="T:mtapi.mt5.ProxyException">The proxy rejected the request.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The proxy server uses an invalid protocol.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.BeginNegotiate(System.String,System.Int32,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with the SOCKS server. 
+            </summary>
+            <param name="host">The host to connect to.</param>
+            <param name="port">The port to connect to.</param>
+            <param name="callback">The method to call when the negotiation is complete.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the SOCKS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.BeginNegotiate(System.Net.IPEndPoint,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with the SOCKS server. 
+            </summary>
+            <param name="remoteEP">An IPEndPoint that represents the remote device.</param>
+            <param name="callback">The method to call when the negotiation is complete.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the SOCKS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.OnConnect(System.IAsyncResult)">
+            <summary>
+            Called when the socket is connected to the remote server.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.OnAuthSent(System.IAsyncResult)">
+            <summary>
+            Called when the authentication bytes have been sent.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.OnAuthReceive(System.IAsyncResult)">
+            <summary>
+            Called when an authentication reply has been received.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.OnAuthenticated(System.Exception)">
+            <summary>
+            Called when the socket has been successfully authenticated with the server.
+            </summary>
+            <param name="e">The exception that has occurred while authenticating, or <em>null</em> if no error occurred.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.OnSent(System.IAsyncResult)">
+            <summary>
+            Called when the connection request has been sent.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.OnReceive(System.IAsyncResult)">
+            <summary>
+            Called when a connection reply has been received.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.ProcessReply(System.Byte[])">
+            <summary>
+            Processes the received reply.
+            </summary>
+            <param name="buffer">The received reply</param>
+            <exception cref="T:System.Net.ProtocolViolationException">The received reply is invalid.</exception>
+        </member>
+        <member name="M:mtapi.mt5.Socks5Handler.OnReadLast(System.IAsyncResult)">
+            <summary>
+            Called when the last bytes are read from the socket.
+            </summary>
+            <param name="ar">Stores state information for this asynchronous operation as well as any user-defined data.</param>
+        </member>
+        <member name="P:mtapi.mt5.Socks5Handler.Password">
+            <summary>
+            Gets or sets the password to use when authenticating with the SOCKS5 server.
+            </summary>
+            <value>The password to use when authenticating with the SOCKS5 server.</value>
+        </member>
+        <member name="P:mtapi.mt5.Socks5Handler.HandShake">
+            <summary>
+            Gets or sets the bytes to use when sending a connect request to the proxy server.
+            </summary>
+            <value>The array of bytes to use when sending a connect request to the proxy server.</value>
+        </member>
+        <member name="F:mtapi.mt5.Socks5Handler.m_Password">
+            <summary>Holds the value of the Password property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.Socks5Handler.m_HandShake">
+            <summary>Holds the value of the HandShake property.</summary>
+        </member>
+        <member name="T:mtapi.mt5.HandShakeComplete">
+            <summary>
+            References the callback method to be called when the protocol negotiation is completed.
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.SocksHandler">
+            <summary>
+            Implements a specific version of the SOCKS protocol. This is an abstract class; it must be inherited.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.#ctor(System.Net.Sockets.Socket,System.String)">
+            <summary>
+            Initializes a new instance of the SocksHandler class.
+            </summary>
+            <param name="server">The socket connection with the proxy server.</param>
+            <param name="user">The username to use when authenticating with the server.</param>
+            <exception cref="T:System.ArgumentNullException"><c>server</c> -or- <c>user</c> is null.</exception>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.PortToBytes(System.Int32)">
+            <summary>
+            Converts a port number to an array of bytes.
+            </summary>
+            <param name="port">The port to convert.</param>
+            <returns>An array of two bytes that represents the specified port.</returns>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.AddressToBytes(System.Int64)">
+            <summary>
+            Converts an IP address to an array of bytes.
+            </summary>
+            <param name="address">The IP address to convert.</param>
+            <returns>An array of four bytes that represents the specified IP address.</returns>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.ReadBytes(System.Int32)">
+            <summary>
+            Reads a specified number of bytes from the Server socket.
+            </summary>
+            <param name="count">The number of bytes to return.</param>
+            <returns>An array of bytes.</returns>
+            <exception cref="T:System.ArgumentException">The number of bytes to read is invalid.</exception>
+            <exception cref="T:System.Net.Sockets.SocketException">An operating system error occurs while accessing the Socket.</exception>
+            <exception cref="T:System.ObjectDisposedException">The Socket has been closed.</exception>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.HandleEndReceive(System.IAsyncResult)">
+            <summary>
+            Reads number of received bytes and ensures that socket was not shut down
+            </summary>
+            <param name="ar">IAsyncResult for receive operation</param>
+            <returns></returns>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.HandleEndSend(System.IAsyncResult,System.Int32)">
+            <summary>
+            Verifies that whole buffer was sent successfully
+            </summary>
+            <param name="ar">IAsyncResult for receive operation</param>
+            <param name="expectedLength">Length of buffer that was sent</param>
+            <returns></returns>
+        </member>
+        <member name="P:mtapi.mt5.SocksHandler.Server">
+            <summary>
+            Gets or sets the socket connection with the proxy server.
+            </summary>
+            <value>A Socket object that represents the connection with the proxy server.</value>
+            <exception cref="T:System.ArgumentNullException">The specified value is null.</exception>
+        </member>
+        <member name="P:mtapi.mt5.SocksHandler.Username">
+            <summary>
+            Gets or sets the username to use when authenticating with the proxy server.
+            </summary>
+            <value>A string that holds the username to use when authenticating with the proxy server.</value>
+            <exception cref="T:System.ArgumentNullException">The specified value is null.</exception>
+        </member>
+        <member name="P:mtapi.mt5.SocksHandler.AsyncResult">
+            <summary>
+            Gets or sets the return value of the BeginConnect call.
+            </summary>
+            <value>An IAsyncProxyResult object that is the return value of the BeginConnect call.</value>
+        </member>
+        <member name="P:mtapi.mt5.SocksHandler.Buffer">
+            <summary>
+            Gets or sets a byte buffer.
+            </summary>
+            <value>An array of bytes.</value>
+        </member>
+        <member name="P:mtapi.mt5.SocksHandler.Received">
+            <summary>
+            Gets or sets the number of bytes that have been received from the remote proxy server.
+            </summary>
+            <value>An integer that holds the number of bytes that have been received from the remote proxy server.</value>
+        </member>
+        <member name="F:mtapi.mt5.SocksHandler.m_Server">
+            <summary>Holds the value of the Server property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.SocksHandler.m_Username">
+            <summary>Holds the value of the Username property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.SocksHandler.m_AsyncResult">
+            <summary>Holds the value of the AsyncResult property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.SocksHandler.m_Buffer">
+            <summary>Holds the value of the Buffer property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.SocksHandler.m_Received">
+            <summary>Holds the value of the Received property.</summary>
+        </member>
+        <member name="F:mtapi.mt5.SocksHandler.ProtocolComplete">
+            <summary>Holds the address of the method to call when the SOCKS protocol has been completed.</summary>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.Negotiate(System.String,System.Int32)">
+            <summary>
+            Starts negotiating with a SOCKS proxy server.
+            </summary>
+            <param name="host">The remote server to connect to.</param>
+            <param name="port">The remote port to connect to.</param>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.Negotiate(System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating with a SOCKS proxy server.
+            </summary>
+            <param name="remoteEP">The remote endpoint to connect to.</param>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.BeginNegotiate(System.Net.IPEndPoint,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with a SOCKS proxy server.
+            </summary>
+            <param name="remoteEP">An IPEndPoint that represents the remote device. </param>
+            <param name="callback">The method to call when the connection has been established.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the SOCKS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="M:mtapi.mt5.SocksHandler.BeginNegotiate(System.String,System.Int32,mtapi.mt5.HandShakeComplete,System.Net.IPEndPoint)">
+            <summary>
+            Starts negotiating asynchronously with a SOCKS proxy server.
+            </summary>
+            <param name="host">The remote server to connect to.</param>
+            <param name="port">The remote port to connect to.</param>
+            <param name="callback">The method to call when the connection has been established.</param>
+            <param name="proxyEndPoint">The IPEndPoint of the SOCKS proxy server.</param>
+            <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="T:mtapi.mt5.ConvertBytes">
+            <summary>
+            Convert byte array to strings.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.ConvertBytes.ToHex(System.Byte[])">
+            <summary>
+            Convert to HEX string.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.ConvertBytes.ToAscii(System.Byte[])">
+            <summary>
+            Convert to ASCII string.
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.vUTF">
+            <summary>
+            Convert string to byte array.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.vUTF.toByte(System.String)">
+            <summary>
+            Convert UNICODE string to byte array.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.vUTF.toString(System.Byte[],System.Int32)">
+            <summary>
+            Convert byte array to UNICODE string.
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Logger">
+            <summary>
+            Log output. 
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Logger.OnMsgHandler">
+            <summary>
+            New message event handler.
+            </summary>
+            <param name="sender">Object that sent message</param>
+            <param name="msg">Message</param>
+            <param name="type">Message type</param>
+        </member>
+        <member name="E:mtapi.mt5.Logger.OnMsg">
+            <summary>
+            New message event.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Logger.Parent">
+            <summary>
+            Enable output debug info in the exception messages.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.Logger.#ctor(System.Object)">
+            <summary>
+            Initialize new Logger.
+            </summary>
+            <param name="parent">Parent object</param>
+        </member>
+        <member name="M:mtapi.mt5.Logger.trace(System.String)">
+            <summary>
+            Trace message.
+            </summary>
+            <param name="msg">Message</param>
+        </member>
+        <member name="M:mtapi.mt5.Logger.debug(System.String)">
+            <summary>
+            Debug message.
+            </summary>
+            <param name="msg">Message</param>
+        </member>
+        <member name="M:mtapi.mt5.Logger.info(System.String)">
+            <summary>
+            Information message.
+            </summary>
+            <param name="msg">Message</param>
+        </member>
+        <member name="M:mtapi.mt5.Logger.warn(System.String)">
+            <summary>
+            Warning message.
+            </summary>
+            <param name="msg">Message</param>
+        </member>
+        <member name="M:mtapi.mt5.Logger.error(System.String)">
+            <summary>
+            Error message.
+            </summary>
+            <param name="msg">Message</param>
+        </member>
+        <member name="M:mtapi.mt5.Logger.exception(System.Exception)">
+            <summary>
+            Exception message.
+            </summary>
+            <param name="ex">Exception</param>
+        </member>
+        <member name="M:mtapi.mt5.Logger.warn(System.Exception)">
+            <summary>
+            Not critical exception message.
+            </summary>
+            <param name="ex">Exception</param>
+        </member>
+        <member name="T:mtapi.mt5.Logger.MsgType">
+            <summary>
+            Message type.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Logger.MsgType.Trace">
+            <summary>
+            Trace.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Logger.MsgType.Debug">
+            <summary>
+            Debug.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Logger.MsgType.Info">
+            <summary>
+            Information.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Logger.MsgType.Warn">
+            <summary>
+            Warning.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Logger.MsgType.Error">
+            <summary>
+            Error.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Logger.MsgType.Exception">
+            <summary>
+            Exception.
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.MD5Managed">
+            <summary>
+            MD5Managed: A HashAlgorithm implementation that acts as a thin wrapper
+            around a C# translation of the MD5 reference implementation. The C code
+            has been translated as closely as possible so that most of the original
+            structure remains and comparisons between the two are straightforward.
+            </summary>
+            <remarks>
+            Derived from the RSA Data Security, Inc. MD5 Message-Digest Algorithm.
+            
+            Specification:
+            RFC1321 - The MD5 Message-Digest Algorithm
+            http://www.faqs.org/rfcs/rfc1321.html
+            
+            Original license:
+            Copyright (C) 1991-2, RSA Data Security, Inc. Created 1991. All
+            rights reserved.
+            
+            License to copy and use this software is granted provided that it
+            is identified as the "RSA Data Security, Inc. MD5 Message-Digest
+            Algorithm" in all material mentioning or referencing this software
+            or this function.
+            
+            License is also granted to make and use derivative works provided
+            that such works are identified as "derived from the RSA Data
+            Security, Inc. MD5 Message-Digest Algorithm" in all material
+            mentioning or referencing the derived work.
+            
+            RSA Data Security, Inc. makes no representations concerning either
+            the merchantability of this software or the suitability of this
+            software for any particular purpose. It is provided "as is"
+            without express or implied warranty of any kind.
+            
+            These notices must be retained in any copies of any part of this
+            documentation and/or software.
+            </remarks>
+        </member>
+        <member name="M:mtapi.mt5.MD5Managed.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MD5Managed.Initialize(System.Boolean)">
+            <summary>
+            Initializes internal state.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MD5Managed.InitializeVariables(System.Boolean)">
+            <summary>
+            Initializes variables.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.MD5Managed.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Updates the hash code with the data provided.
+            </summary>
+            <param name="array">Data to hash.</param>
+            <param name="ibStart">Start position.</param>
+            <param name="cbSize">Number of bytes.</param>
+        </member>
+        <member name="M:mtapi.mt5.MD5Managed.HashFinal">
+            <summary>
+            Finalizes the hash code and returns it.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:mtapi.mt5.MD5Managed.Hash">
+            <summary>
+            Returns the hash as an array of bytes.
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.OrderProgressEventArgs">
+            <summary>
+            Order progress event arguments.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderProgressEventArgs.TempID">
+            <summary>
+            Temporary ID. Useful until server assign ticket number.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderProgressEventArgs.Type">
+            <summary>
+            Stage of order processing by server.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderProgressEventArgs.Exception">
+            <summary>
+            Exception during processing of the order. Could be ServerException or RequoteException.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.OrderProgressEventArgs.ToString">
+            <summary>
+            Converts to string.
+            </summary>
+            <returns>"TempID Type Exception"</returns>
+        </member>
+        <member name="T:mtapi.mt5.ProgressType">
+            <summary>
+            Stage of order processing by server.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Rejected">
+            <summary>
+            Order was rejected.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Accepted">
+            <summary>
+            Order was accepted by server.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.InProcess">
+            <summary>
+            Server started to execute the order.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Opened">
+            <summary>
+            Order was opened.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Closed">
+            <summary>
+            Order was closed.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Modified">
+            <summary>
+            Order was modified.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.PendingDeleted">
+            <summary>
+            Pending order was deleted.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.ClosedBy">
+            <summary>
+            Closed of pair of opposite orders.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.MultipleClosedBy">
+            <summary>
+            Closed of multiple orders.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Timeout">
+            <summary>
+            Trade timeout.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Price">
+            <summary>
+            Price data.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ProgressType.Exception">
+            <summary>
+            Exception.
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ServerException">
+            <summary>
+            Error reply from server on login and order opening/closing/modifying.
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.ServerException.Code">
+            <summary>
+            Error code.
+            </summary>
+        </member>
+        <member name="M:mtapi.mt5.ServerException.#ctor(mtapi.mt5.Msg)">
+            <summary>
+            Initialize ServerException.
+            </summary>
+            <param name="code">Exception code.</param>
+        </member>
+        <member name="T:mtapi.mt5.Access">
+            <summary>
+            Server name and adresses from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AccessEx">
+            <summary>
+            Server name and adresses from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Server">
+            <summary>
+            Server details from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.SymbolSessions">
+            <summary>
+            Quotes and trades sessions of the symbol
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.TradeRequest">
+            <summary>
+            Trade request
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:mtapi.mt5.TradeRequest.RequestId" -->
+        <member name="F:mtapi.mt5.TradeRequest.TradeType">
+            <summary>
+            Trade type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.Login">
+            <summary>
+            Account login
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.TransferLogin">
+            <summary>
+            Transfer login
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.Currency">
+            <summary>
+            Symbol currency
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.TradeRequest.Lots">
+            <summary>
+            Lots
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.Digits">
+            <summary>
+            Significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.OrderTicket">
+            <summary>
+            Order ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.ExpirationTime">
+            <summary>
+            Expiration time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.OrderType">
+            <summary>
+            Order type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.FillPolicy">
+            <summary>
+            Fill policy
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.ExpirationType">
+            <summary>
+            Expiration type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.Flags">
+            <summary>
+            Request flags
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.PlacedType">
+            <summary>
+            Placed type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.OrderPrice">
+            <summary>
+            Order price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.StopLoss">
+            <summary>
+            Stop loss
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.TakeProfit">
+            <summary>
+            Take profit
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.Deviation">
+            <summary>
+            Deviation
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.ExpertId">
+            <summary>
+            Expert id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.Comment">
+            <summary>
+            Text comment
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.DealTicket">
+            <summary>
+            Deal ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TradeRequest.ByCloseTicket">
+            <summary>
+            By close deal ticket
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AccessRec">
+            <summary>
+            ServerName from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AccessInfo">
+            <summary>
+            Server name from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AccessRecEx">
+            <summary>
+            Server information from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AccountRec">
+            <summary>
+            Account details
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AddressRec">
+            <summary>
+            Server address from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.AddressRecEx">
+            <summary>
+            Server information from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.DealInternal">
+            <summary>
+            Internal details for the deal
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.TicketNumber">
+            <summary>
+            Deal ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Id">
+            <summary>
+            Text id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Login">
+            <summary>
+            Account login
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.HistoryTime">
+            <summary>
+            History time (as FileTime format)
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.OrderTicket">
+            <summary>
+            Order ticket
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.DealInternal.OpenTimeAsDateTime">
+            <summary>
+            Open time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.OpenTime">
+            <summary>
+            Open time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Symbol">
+            <summary>
+            Symbol currency
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Type">
+            <summary>
+            Deal type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Direction">
+            <summary>
+            Deal direction
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.OpenPrice">
+            <summary>
+            Open price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.StopLoss">
+            <summary>
+            Stop loss
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.TakeProfit">
+            <summary>
+            Take profit
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.DealInternal.Lots">
+            <summary>
+            Lots
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Volume">
+            <summary>
+            Volume
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Profit">
+            <summary>
+            Profit (money digits)
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.ProfitRate">
+            <summary>
+            Profit rate
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.VolumeRate">
+            <summary>
+            Volume rate
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Commission">
+            <summary>
+            Commission (money digits)
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Swap">
+            <summary>
+            Swap
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.ExpertId">
+            <summary>
+            Expert id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.PositionTicket">
+            <summary>
+            Position ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Comment">
+            <summary>
+            Text comment
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.ContractSize">
+            <summary>
+            Lots
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.Digits">
+            <summary>
+            Significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.MoneyDigits">
+            <summary>
+            Money significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.FreeProfit">
+            <summary>
+            Free profit
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.TrailRounder">
+            <summary>
+            Trail rounder
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.OpenTimeMs">
+            <summary>
+            Open time (ms)
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.DealInternal.PlacedType">
+            <summary>
+            Placed type
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Order">
+            <summary>
+            Pending, market or history order
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.OrderInternal">
+            <summary>
+            Internal information for the order(pending)
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.TicketNumber">
+            <summary>
+            Ticket number
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Id">
+            <summary>
+            Text id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Login">
+            <summary>
+            Account login
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Symbol">
+            <summary>
+            Symbol currency
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.HistoryTime">
+            <summary>
+            History time	(as FileTime format)
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.OpenTime">
+            <summary>
+            Open time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.ExpirationTime">
+            <summary>
+            Expiration time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.ExecutionTime">
+            <summary>
+            Execution time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Type">
+            <summary>
+            Order type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.FillPolicy">
+            <summary>
+            Fill policy
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.ExpirationType">
+            <summary>
+            Expiration type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.PlacedType">
+            <summary>
+            Placed type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.OpenPrice">
+            <summary>
+            Open price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.StopLimitPrice">
+            <summary>
+            StopLimit price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.StopLoss">
+            <summary>
+            Stop loss
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.TakeProfit">
+            <summary>
+            Take profit
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.OrderInternal.Lots">
+            <summary>
+            Lots
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Volume">
+            <summary>
+            Cover volume
+            </summary>
+        </member>
+        <member name="P:mtapi.mt5.OrderInternal.RequestLots">
+            <summary>
+            Request lots
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.RequestVolume">
+            <summary>
+            Request volume
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.State">
+            <summary>
+            Order state
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.ExpertId">
+            <summary>
+            Expert id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.DealTicket">
+            <summary>
+            Associative deal ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Comment">
+            <summary>
+            Comment text
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.ContractSize">
+            <summary>
+            Lots
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.Digits">
+            <summary>
+            Significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.BaseDigits">
+            <summary>
+            Symbols base significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.ProfitRate">
+            <summary>
+            Profit rate
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.OrderInternal.OpenTimeMs">
+            <summary>
+            Open time (ms)
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ServerInfoEx">
+            <summary>
+            Server information from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ServerInfo">
+            <summary>
+            Server information from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.ServerRec">
+            <summary>
+            Server details from servers.dat
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.Session">
+            <summary>
+            Trade or quote session details
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Session.StartTime">
+            <summary>
+            Start time (in minites)
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Session.EndTime">
+            <summary>
+            End time (in minutes)
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.SymBaseInfo">
+            <summary>
+            Base symbol information
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.SymbolInfo">
+            <summary>
+            Symbol details
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.UpdateTime">
+            <summary>
+            Update time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.Currency">
+            <summary>
+            Symbol currency
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.ISIN">
+            <summary>
+            Symbol ISIN
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.RefToSite">
+            <summary>
+            Reference to site
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.ProfitCurrency">
+            <summary>
+            Currency for profit
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.MarginCurrency">
+            <summary>
+            Currency for margin
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.BkgndColor">
+            <summary>
+            Background color
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.Digits">
+            <summary>
+            Significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.Points">
+            <summary>
+            Symbol points
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.LimitPoints">
+            <summary>
+            Symbol limit points
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.Id">
+            <summary>
+            Symbol id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.DepthOfMarket">
+            <summary>
+            Depth of market
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.Spread">
+            <summary>
+            Spread
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.TickValue">
+            <summary>
+            Tick value
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.TickSize">
+            <summary>
+            Tick size
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.ContractSize">
+            <summary>
+            Contract size
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.GTCMode">
+            <summary>
+            Good till canceled mode
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.CalcMode">
+            <summary>
+            Calculation mode
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.SettlementPrice">
+            <summary>
+            Settlement price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.LowerLimit">
+            <summary>
+            Lower limit
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.UpperLimit">
+            <summary>
+            Upper limit
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.FaceValue">
+            <summary>
+            Face value
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.AccruedInterest">
+            <summary>
+            Accuired interest
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.FirstTradeTime">
+            <summary>
+            First trade time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.SymbolInfo.LastTradeTime">
+            <summary>
+            Last trade time
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.SymGroup">
+            <summary>
+            Symbol group information
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:mtapi.mt5.Struct.TradeRequestInternal.RequestId" -->
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.TradeType">
+            <summary>
+            Trade type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Login">
+            <summary>
+            Account login
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.TransferLogin">
+            <summary>
+            Transfer login
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Currency">
+            <summary>
+            Symbol currency
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Lots">
+            <summary>
+            Lots
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Digits">
+            <summary>
+            Significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.OrderTicket">
+            <summary>
+            Order ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.ExpirationTime">
+            <summary>
+            Expiration time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.OrderType">
+            <summary>
+            Order type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.FillPolicy">
+            <summary>
+            Fill policy
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.ExpirationType">
+            <summary>
+            Expiration type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Flags">
+            <summary>
+            Request flags
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.PlacedType">
+            <summary>
+            Placed type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.OrderPrice">
+            <summary>
+            Order price
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.StopLoss">
+            <summary>
+            Stop loss
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.TakeProfit">
+            <summary>
+            Take profit
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Deviation">
+            <summary>
+            Deviation
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.ExpertId">
+            <summary>
+            Expert id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.Comment">
+            <summary>
+            Text comment
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.DealTicket">
+            <summary>
+            Deal ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.Struct.TradeRequestInternal.ByCloseTicket">
+            <summary>
+            By close deal ticket
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.TradeResult">
+            <summary>
+            Trade result
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.TransactionInfo">
+            <summary>
+            Transaction information
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.UpdateId">
+            <summary>
+            Transaction ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.Action">
+            <summary>
+            Order ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.TicketNumber">
+            <summary>
+            Deal ticket
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.Id">
+            <summary>
+            Symbol currency
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.s54">
+            <summary>
+            Significant digits
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.s58">
+            <summary>
+            Transaction id
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.s5C">
+            <summary>
+            Transaction type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.OrderState">
+            <summary>
+            Order type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.ExpirationType">
+            <summary>
+            Order state
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.ExpirationTime">
+            <summary>
+            Order placed type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.OpenPrice">
+            <summary>
+            Deal type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.OrderPrice">
+            <summary>
+            Deal placed type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.StopLoss">
+            <summary>
+            Expiration type
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.TakeProfit">
+            <summary>
+            Expiration time
+            </summary>
+        </member>
+        <member name="F:mtapi.mt5.TransactionInfo.Volume">
+            <summary>
+            Open price
+            </summary>
+        </member>
+        <member name="T:mtapi.mt5.OrderProgress">
+            <summary>
+            Details of trade progress
+            </summary>
+        </member>
+        <member name="M:Reflection.CopyProperties(System.Object,System.Object)">
+            <summary>
+            Extension for 'Object' that copies the properties to a destination object.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination.</param>
+        </member>
+    </members>
+</doc>
