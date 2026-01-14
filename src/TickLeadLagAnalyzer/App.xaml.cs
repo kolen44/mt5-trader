@@ -83,17 +83,20 @@ public partial class App : Application
     
     protected override void OnExit(ExitEventArgs e)
     {
-        if (_serviceProvider != null)
+        try
         {
-            var vm = _serviceProvider.GetService<MainViewModel>();
+            var vm = _serviceProvider?.GetService<MainViewModel>();
             vm?.Dispose();
-            
-            var connection = _serviceProvider.GetService<IMt5ConnectionService>();
-            connection?.DisposeAsync().AsTask().Wait(5000);
         }
+        catch { }
         
         Log.CloseAndFlush();
-        _serviceProvider?.Dispose();
+        
+        try
+        {
+            _serviceProvider?.Dispose();
+        }
+        catch { }
         
         base.OnExit(e);
     }

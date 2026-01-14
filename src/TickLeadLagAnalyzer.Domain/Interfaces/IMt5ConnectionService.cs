@@ -2,7 +2,7 @@ using TickLeadLagAnalyzer.Domain.Models;
 
 namespace TickLeadLagAnalyzer.Domain.Interfaces;
 
-public interface IMt5ConnectionService : IAsyncDisposable
+public interface IMt5ConnectionService : IAsyncDisposable, IDisposable
 {
     ConnectionStatus Status { get; }
     event EventHandler<ConnectionStatus>? StatusChanged;

@@ -56,3 +56,4 @@ C:\projects\WP\result\src\TickLeadLagAnalyzer\obj\Debug\net9.0-windows\refint\Ti
 C:\projects\WP\result\src\TickLeadLagAnalyzer\obj\Debug\net9.0-windows\TickLeadLagAnalyzer.pdb
 C:\projects\WP\result\src\TickLeadLagAnalyzer\obj\Debug\net9.0-windows\TickLeadLagAnalyzer.genruntimeconfig.cache
 C:\projects\WP\result\src\TickLeadLagAnalyzer\obj\Debug\net9.0-windows\ref\TickLeadLagAnalyzer.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer\obj\Debug\net9.0-windows\TickLeadLagAnalyzer.sourcelink.json

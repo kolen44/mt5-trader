@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TickLeadLagAnalyzer.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60c6b4f5a62e15198b60528ca0a041168d75b414")]
 [assembly: System.Reflection.AssemblyProductAttribute("TickLeadLagAnalyzer.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TickLeadLagAnalyzer.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

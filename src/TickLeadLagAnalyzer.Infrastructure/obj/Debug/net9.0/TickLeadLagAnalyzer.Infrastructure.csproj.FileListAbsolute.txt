@@ -15,3 +15,4 @@ C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\Ti
 C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\refint\TickLeadLagAnalyzer.Infrastructure.dll
 C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.pdb
 C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\ref\TickLeadLagAnalyzer.Infrastructure.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.sourcelink.json

@@ -9,3 +9,4 @@ C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLa
 C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\refint\TickLeadLagAnalyzer.Domain.dll
 C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.pdb
 C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\ref\TickLeadLagAnalyzer.Domain.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.sourcelink.json

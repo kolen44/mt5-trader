@@ -139,17 +139,11 @@ public sealed class Mt5ConnectionService : IMt5ConnectionService
                 _api.OnQuote -= OnQuoteReceived;
                 _api.OnConnectProgress -= OnConnectProgress;
                 
-                await Task.Run(() =>
+                try
                 {
-                    try
-                    {
-                        _api.Disconnect();
-                    }
-                    catch (Exception ex)
-                    {
-                        _logger.LogWarning(ex, "Error during disconnect");
-                    }
-                });
+                    _api.Disconnect();
+                }
+                catch { }
             }
             
             lock (_lock)
@@ -158,7 +152,6 @@ public sealed class Mt5ConnectionService : IMt5ConnectionService
             }
             
             Status = ConnectionStatus.Disconnected;
-            _logger.LogInformation("Disconnected from MT5 server");
         }
         catch (Exception ex)
         {
@@ -300,5 +293,10 @@ public sealed class Mt5ConnectionService : IMt5ConnectionService
     {
         await DisconnectAsync();
         _api = null;
+    }
+    
+    public void Dispose()
+    {
+        DisposeAsync().AsTask().GetAwaiter().GetResult();
     }
 }
