@@ -1,3 +1,6 @@
+<img width="1919" height="1150" alt="image" src="https://github.com/user-attachments/assets/98c51775-73a1-4769-a455-6069ad043af1" />
+<img width="1183" height="699" alt="image" src="https://github.com/user-attachments/assets/72143dff-ba24-45fd-85a4-7608a8279e81" />
+
 # Tick Lead-Lag Analyzer
 
 Приложение для анализа тиков MT5 — показывает какой символ ведущий, какой отстающий.
