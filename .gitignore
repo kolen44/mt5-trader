@@ -1,0 +1,16 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+logs/
+*.log
+
+# IDE
+.idea/
+*.swp
+*~
+
+# Build
+publish/
+out/
