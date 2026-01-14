@@ -4,6 +4,8 @@
 
 ## Запуск
 
+### Обычный запуск
+
 Нужен .NET 9.0 SDK и Windows.
 
 ```bash
@@ -13,7 +15,20 @@ dotnet build
 dotnet run --project src/TickLeadLagAnalyzer
 ```
 
-Тестовый счёт:
+### Docker
+
+```bash
+docker build -t tick-analyzer .
+docker run -it tick-analyzer
+```
+
+Или через docker-compose:
+```bash
+docker-compose up --build
+```
+
+### Тестовый счёт
+
 - Server: 185.97.160.70:443
 - Login: 5002166
 - Password: !l2kCkPka

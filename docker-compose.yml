@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  tick-analyzer:
+    build: .
+    container_name: tick-lead-lag-analyzer
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
