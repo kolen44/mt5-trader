@@ -12,7 +12,6 @@
 Нужен .NET 9.0 SDK и Windows.
 
 ```bash
-cd result
 dotnet restore
 dotnet build
 dotnet run --project src/TickLeadLagAnalyzer
