@@ -1,0 +1,11 @@
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\bin\Debug\net9.0\TickLeadLagAnalyzer.Domain.deps.json
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\bin\Debug\net9.0\TickLeadLagAnalyzer.Domain.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\bin\Debug\net9.0\TickLeadLagAnalyzer.Domain.pdb
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.AssemblyInfoInputs.cache
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.AssemblyInfo.cs
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.csproj.CoreCompileInputs.cache
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\refint\TickLeadLagAnalyzer.Domain.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\TickLeadLagAnalyzer.Domain.pdb
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Domain\obj\Debug\net9.0\ref\TickLeadLagAnalyzer.Domain.dll

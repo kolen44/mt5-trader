@@ -1,0 +1,32 @@
+2026-01-14 05:37:37.696 +01:00 [INF] Application starting...
+2026-01-14 05:37:37.929 +01:00 [INF] MainViewModel initialized
+2026-01-14 05:37:40.274 +01:00 [INF] Application started successfully
+2026-01-14 05:38:02.374 +01:00 [INF] Disconnecting from MT5 server
+2026-01-14 05:38:02.374 +01:00 [INF] Disconnected from MT5 server
+2026-01-14 05:38:37.136 +01:00 [INF] Application starting...
+2026-01-14 05:38:37.217 +01:00 [INF] MainViewModel initialized
+2026-01-14 05:38:37.775 +01:00 [INF] Application started successfully
+2026-01-14 05:38:39.772 +01:00 [INF] Connecting to MT5 server 185.97.160.70:443 with login 5002166
+2026-01-14 05:38:39.860 +01:00 [DBG] Connect progress: "SendLogin"
+2026-01-14 05:38:39.914 +01:00 [DBG] Connect progress: "SendAccountPassword"
+2026-01-14 05:38:39.918 +01:00 [DBG] Connect progress: "AcceptAuthorized"
+2026-01-14 05:38:40.238 +01:00 [DBG] Connect progress: "RequestTradeInfo"
+2026-01-14 05:38:40.465 +01:00 [DBG] Connect progress: "Connected"
+2026-01-14 05:38:40.465 +01:00 [INF] Successfully connected to MT5 server
+2026-01-14 05:38:40.466 +01:00 [INF] Available symbols (332): BBY.US, EMAAR.AE, AUDNZD.cl, CLH6.cl, MTCH.US, NZDUSD.cl, USDCAD.cl, MTB.US, BX.US, META.US, EZJ.UK, EURPLN.cl, AMZN.US, MET.US, USOIL.cl, BAYN.DE, DB1Gn.DE, AXP.US, ADS.DE, AML.UK
+2026-01-14 05:38:40.467 +01:00 [INF] Connected. Available symbols: 332
+2026-01-14 05:38:40.469 +01:00 [INF] Subscribing to symbol EURUSD.cl (actual: EURUSD.cl)
+2026-01-14 05:38:40.473 +01:00 [INF] Subscribed to symbol EURUSD.cl
+2026-01-14 05:38:40.474 +01:00 [INF] Subscribing to symbol GBPUSD.cl (actual: GBPUSD.cl)
+2026-01-14 05:38:40.474 +01:00 [INF] Subscribed to symbol GBPUSD.cl
+2026-01-14 05:38:40.474 +01:00 [INF] Subscribing to symbol XAUUSD.cl (actual: XAUUSD.cl)
+2026-01-14 05:38:40.474 +01:00 [INF] Subscribed to symbol XAUUSD.cl
+2026-01-14 05:38:40.474 +01:00 [INF] Subscribing to symbol USDJPY.cl (actual: USDJPY.cl)
+2026-01-14 05:38:40.474 +01:00 [INF] Subscribed to symbol USDJPY.cl
+2026-01-14 05:38:40.474 +01:00 [INF] Subscribing to symbol USOIL.cl (actual: USOIL.cl)
+2026-01-14 05:38:40.475 +01:00 [INF] Subscribed to symbol USOIL.cl
+2026-01-14 05:38:57.784 +01:00 [INF] Set base symbol to XAUUSD.cl
+2026-01-14 05:39:02.256 +01:00 [INF] Set base symbol to USOIL.cl
+2026-01-14 05:39:06.838 +01:00 [INF] Set base symbol to GBPUSD.cl
+2026-01-14 05:39:11.443 +01:00 [INF] Set base symbol to EURUSD.cl
+2026-01-14 05:43:17.971 +01:00 [INF] Disconnecting from MT5 server

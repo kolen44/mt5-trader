@@ -1,0 +1,123 @@
+2026-01-14 05:19:59.242 +01:00 [INF] MainViewModel initialized
+2026-01-14 05:20:10.241 +01:00 [INF] Connecting to MT5 server 185.97.160.70:443 with login 5002166
+2026-01-14 05:20:10.336 +01:00 [DBG] Connect progress: "SendLogin"
+2026-01-14 05:20:10.399 +01:00 [DBG] Connect progress: "SendAccountPassword"
+2026-01-14 05:20:10.403 +01:00 [DBG] Connect progress: "AcceptAuthorized"
+2026-01-14 05:20:11.184 +01:00 [DBG] Connect progress: "RequestTradeInfo"
+2026-01-14 05:20:11.406 +01:00 [DBG] Connect progress: "Connected"
+2026-01-14 05:20:11.407 +01:00 [INF] Successfully connected to MT5 server
+2026-01-14 05:20:11.411 +01:00 [INF] Subscribing to symbol EURUSD
+2026-01-14 05:20:11.412 +01:00 [ERR] Error subscribing to symbol EURUSD
+mtapi.mt5.InvalidSymbolException: EURUSD not exist
+   at mtapi.mt5.MT5API.Subscribe(String symbol) in C:\projects\WP\mt5-net-api-main\mt5-net-api-main\Public\QuoteClient.cs:line 1736
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.<>c__DisplayClass20_0.<SubscribeAsync>b__0() in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 182
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.SubscribeAsync(String symbol) in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 180
+2026-01-14 05:20:11.448 +01:00 [INF] Subscribing to symbol GBPUSD
+2026-01-14 05:20:11.448 +01:00 [ERR] Error subscribing to symbol GBPUSD
+mtapi.mt5.InvalidSymbolException: GBPUSD not exist
+   at mtapi.mt5.MT5API.Subscribe(String symbol) in C:\projects\WP\mt5-net-api-main\mt5-net-api-main\Public\QuoteClient.cs:line 1736
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.<>c__DisplayClass20_0.<SubscribeAsync>b__0() in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 182
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.SubscribeAsync(String symbol) in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 180
+2026-01-14 05:20:11.449 +01:00 [INF] Subscribing to symbol XAUUSD
+2026-01-14 05:20:11.449 +01:00 [ERR] Error subscribing to symbol XAUUSD
+mtapi.mt5.InvalidSymbolException: XAUUSD not exist
+   at mtapi.mt5.MT5API.Subscribe(String symbol) in C:\projects\WP\mt5-net-api-main\mt5-net-api-main\Public\QuoteClient.cs:line 1736
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.<>c__DisplayClass20_0.<SubscribeAsync>b__0() in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 182
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.SubscribeAsync(String symbol) in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 180
+2026-01-14 05:20:11.449 +01:00 [INF] Subscribing to symbol USDJPY
+2026-01-14 05:20:11.449 +01:00 [ERR] Error subscribing to symbol USDJPY
+mtapi.mt5.InvalidSymbolException: USDJPY not exist
+   at mtapi.mt5.MT5API.Subscribe(String symbol) in C:\projects\WP\mt5-net-api-main\mt5-net-api-main\Public\QuoteClient.cs:line 1736
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.<>c__DisplayClass20_0.<SubscribeAsync>b__0() in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 182
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.SubscribeAsync(String symbol) in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 180
+2026-01-14 05:20:11.449 +01:00 [INF] Subscribing to symbol USOIL
+2026-01-14 05:20:11.450 +01:00 [ERR] Error subscribing to symbol USOIL
+mtapi.mt5.InvalidSymbolException: USOIL not exist
+   at mtapi.mt5.MT5API.Subscribe(String symbol) in C:\projects\WP\mt5-net-api-main\mt5-net-api-main\Public\QuoteClient.cs:line 1736
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.<>c__DisplayClass20_0.<SubscribeAsync>b__0() in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 182
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at TickLeadLagAnalyzer.Infrastructure.Services.Mt5ConnectionService.SubscribeAsync(String symbol) in C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\Services\Mt5ConnectionService.cs:line 180
+2026-01-14 05:22:28.457 +01:00 [INF] Application starting...
+2026-01-14 05:22:28.657 +01:00 [INF] MainViewModel initialized
+2026-01-14 05:22:29.060 +01:00 [INF] Application started successfully
+2026-01-14 05:22:41.804 +01:00 [INF] Connecting to MT5 server 185.97.160.70:443 with login 5002166
+2026-01-14 05:22:41.920 +01:00 [DBG] Connect progress: "SendLogin"
+2026-01-14 05:22:41.975 +01:00 [DBG] Connect progress: "SendAccountPassword"
+2026-01-14 05:22:41.978 +01:00 [DBG] Connect progress: "AcceptAuthorized"
+2026-01-14 05:22:42.309 +01:00 [DBG] Connect progress: "RequestTradeInfo"
+2026-01-14 05:22:42.527 +01:00 [DBG] Connect progress: "Connected"
+2026-01-14 05:22:42.527 +01:00 [INF] Successfully connected to MT5 server
+2026-01-14 05:22:42.528 +01:00 [INF] Available symbols (332): BBY.US, EMAAR.AE, AUDNZD.cl, CLH6.cl, MTCH.US, NZDUSD.cl, USDCAD.cl, MTB.US, BX.US, META.US, EZJ.UK, EURPLN.cl, AMZN.US, MET.US, USOIL.cl, BAYN.DE, DB1Gn.DE, AXP.US, ADS.DE, AML.UK
+2026-01-14 05:22:42.528 +01:00 [INF] Connected. Available symbols: 332
+2026-01-14 05:22:42.530 +01:00 [INF] Subscribing to symbol EURUSD.cl (actual: EURUSD.cl)
+2026-01-14 05:22:42.534 +01:00 [INF] Subscribed to symbol EURUSD.cl
+2026-01-14 05:22:42.534 +01:00 [INF] Subscribing to symbol GBPUSD.cl (actual: GBPUSD.cl)
+2026-01-14 05:22:42.535 +01:00 [INF] Subscribed to symbol GBPUSD.cl
+2026-01-14 05:22:42.535 +01:00 [INF] Subscribing to symbol XAUUSD.cl (actual: XAUUSD.cl)
+2026-01-14 05:22:42.535 +01:00 [INF] Subscribed to symbol XAUUSD.cl
+2026-01-14 05:22:42.535 +01:00 [INF] Subscribing to symbol USDJPY.cl (actual: USDJPY.cl)
+2026-01-14 05:22:42.536 +01:00 [INF] Subscribed to symbol USDJPY.cl
+2026-01-14 05:22:42.536 +01:00 [INF] Subscribing to symbol USOIL.cl (actual: USOIL.cl)
+2026-01-14 05:22:42.536 +01:00 [INF] Subscribed to symbol USOIL.cl
+2026-01-14 05:22:57.215 +01:00 [INF] Unsubscribing from symbol USOIL.cl
+2026-01-14 05:22:57.222 +01:00 [INF] Unsubscribed from symbol USOIL.cl
+2026-01-14 05:22:57.224 +01:00 [INF] Removed symbol USOIL.cl
+2026-01-14 05:23:16.781 +01:00 [ERR] Unhandled exception
+System.ObjectDisposedException: The CancellationTokenSource has been disposed.
+   at System.Threading.CancellationTokenSource.Cancel()
+   at TickLeadLagAnalyzer.ViewModels.MainViewModel.Dispose() in C:\projects\WP\result\src\TickLeadLagAnalyzer\ViewModels\MainViewModel.cs:line 501
+   at TickLeadLagAnalyzer.App.OnExit(ExitEventArgs e) in C:\projects\WP\result\src\TickLeadLagAnalyzer\App.xaml.cs:line 89
+   at System.Windows.Application.DoShutdown()
+   at System.Windows.Application.ShutdownImpl()
+   at System.Windows.Application.ShutdownCallback(Object arg)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+2026-01-14 05:23:47.808 +01:00 [INF] Application starting...
+2026-01-14 05:23:47.939 +01:00 [INF] MainViewModel initialized
+2026-01-14 05:23:48.796 +01:00 [INF] Application started successfully
+2026-01-14 05:23:51.221 +01:00 [INF] Connecting to MT5 server 185.97.160.70:443 with login 5002166
+2026-01-14 05:23:51.296 +01:00 [DBG] Connect progress: "SendLogin"
+2026-01-14 05:23:51.351 +01:00 [DBG] Connect progress: "SendAccountPassword"
+2026-01-14 05:23:51.354 +01:00 [DBG] Connect progress: "AcceptAuthorized"
+2026-01-14 05:23:51.668 +01:00 [DBG] Connect progress: "RequestTradeInfo"
+2026-01-14 05:23:51.909 +01:00 [DBG] Connect progress: "Connected"
+2026-01-14 05:23:51.910 +01:00 [INF] Successfully connected to MT5 server
+2026-01-14 05:23:51.911 +01:00 [INF] Available symbols (332): BBY.US, EMAAR.AE, AUDNZD.cl, CLH6.cl, MTCH.US, NZDUSD.cl, USDCAD.cl, MTB.US, BX.US, META.US, EZJ.UK, EURPLN.cl, AMZN.US, MET.US, USOIL.cl, BAYN.DE, DB1Gn.DE, AXP.US, ADS.DE, AML.UK
+2026-01-14 05:23:51.912 +01:00 [INF] Connected. Available symbols: 332
+2026-01-14 05:23:51.917 +01:00 [INF] Subscribing to symbol EURUSD.cl (actual: EURUSD.cl)
+2026-01-14 05:23:51.924 +01:00 [INF] Subscribed to symbol EURUSD.cl
+2026-01-14 05:23:51.925 +01:00 [INF] Subscribing to symbol GBPUSD.cl (actual: GBPUSD.cl)
+2026-01-14 05:23:51.925 +01:00 [INF] Subscribed to symbol GBPUSD.cl
+2026-01-14 05:23:51.925 +01:00 [INF] Subscribing to symbol XAUUSD.cl (actual: XAUUSD.cl)
+2026-01-14 05:23:51.925 +01:00 [INF] Subscribed to symbol XAUUSD.cl
+2026-01-14 05:23:51.926 +01:00 [INF] Subscribing to symbol USDJPY.cl (actual: USDJPY.cl)
+2026-01-14 05:23:51.926 +01:00 [INF] Subscribed to symbol USDJPY.cl
+2026-01-14 05:23:51.926 +01:00 [INF] Subscribing to symbol USOIL.cl (actual: USOIL.cl)
+2026-01-14 05:23:51.927 +01:00 [INF] Subscribed to symbol USOIL.cl
+2026-01-14 05:27:51.643 +01:00 [INF] Set base symbol to GBPUSD.cl
+2026-01-14 05:27:57.716 +01:00 [INF] Set base symbol to XAUUSD.cl
+2026-01-14 05:28:03.336 +01:00 [INF] Set base symbol to EURUSD.cl

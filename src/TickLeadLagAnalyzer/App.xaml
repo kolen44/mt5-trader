@@ -1,0 +1,19 @@
+<Application x:Class="TickLeadLagAnalyzer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:TickLeadLagAnalyzer.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Converters -->
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+            <converters:StatusColorConverter x:Key="StatusColorConverter"/>
+            <converters:LeadLagIconConverter x:Key="LeadLagIconConverter"/>
+            <converters:LeadLagColorConverter x:Key="LeadLagColorConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

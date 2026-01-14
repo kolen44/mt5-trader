@@ -1,0 +1,17 @@
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.csproj.AssemblyReference.cache
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.AssemblyInfoInputs.cache
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.AssemblyInfo.cs
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.csproj.CoreCompileInputs.cache
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\bin\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.deps.json
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\bin\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\bin\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.pdb
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\bin\Debug\net9.0\mt5api.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\bin\Debug\net9.0\TickLeadLagAnalyzer.Domain.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\bin\Debug\net9.0\TickLeadLagAnalyzer.Domain.pdb
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\bin\Debug\net9.0\mt5api.pdb
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLead.DC11A3F2.Up2Date
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\refint\TickLeadLagAnalyzer.Infrastructure.dll
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\TickLeadLagAnalyzer.Infrastructure.pdb
+C:\projects\WP\result\src\TickLeadLagAnalyzer.Infrastructure\obj\Debug\net9.0\ref\TickLeadLagAnalyzer.Infrastructure.dll
